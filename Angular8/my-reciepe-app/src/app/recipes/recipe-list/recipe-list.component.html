@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success" (click)="onNewRecipe()">New Recipe</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+        <!-- <a href="#" class="list-group-item clearfix" *ngFor="let currRecipe of recipes">
+            <div class="pull-left">
+                <h4 class="list-group-item-heading">{{currRecipe.name}}</h4>
+                <p class="list-group-item-text">{{currRecipe.description}}</p>
+            </div>
+            <span class="pull-left">
+                <image class="img-responsive" [src]="currRecipe.imagePath" alt="{{currRecipe.name}}" style="max-height:50px;" />
+            </span>
+        </a> -->
+        <!-- <app-recipe-item (showDescription)="recipeDetail($event)" *ngFor="let currRecipe of recipes"
+            [recipe]="currRecipe" (showSelected) = "onRecipeSelected(currRecipe)"></app-recipe-item> -->
+        <app-recipe-item *ngFor="let currRecipe of recipes; let i=index" [recipe]="currRecipe" [index]="i">
+        </app-recipe-item>
+    </div>
+</div>
